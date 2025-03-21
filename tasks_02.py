@@ -62,7 +62,7 @@ list_of_strings = ["banana", "apple", "strawberry"]
 # Create a new tuple containing the first three fruits.
 
 
-# ########### Problem 4
+########### Problem 4
 
 # Create a dictionary with student names and grades: 'Alice': 85, 'Bob': 92, 'Charlie': 78
 
@@ -81,7 +81,7 @@ list_of_strings = ["banana", "apple", "strawberry"]
 # Add 2 new students - Alex and Rob, and their grades - 93 and 76
 
 
-# ########### Problem 5
+########### Problem 5
 
 # Create a set with the movies "Inception", "The Matrix", "Interstellar", "The Dark Knight"
 
@@ -98,3 +98,80 @@ list_of_strings = ["banana", "apple", "strawberry"]
 # Print the intersection of the two sets
 
 # Print the difference of the two sets
+
+
+########### Example 1 - reading a text file
+
+with open("sample_files/02_text_file.txt", "r") as file:
+    # read -> the content is a string
+    content = file.read()
+    print(content)
+
+with open("sample_files/02_text_file.txt", "r") as file:
+    # the content is a list of all the lines of the file
+    content = file.readlines()
+    print(content)
+
+with open("sample_files/02_text_file.txt", "r") as file:
+    # the content is the first unread line of the file
+    content = file.readline()
+    print(content)
+
+
+########### Example 2 - writing to a text file
+
+with open("sample_files/02_example_write.txt", "w") as file:
+    file.write("Hello, World! ")
+
+with open("sample_files/02_example_write.txt", "a") as file:
+    file.write("My name is Alice")
+
+
+########### Example 3 - reading a CSV file
+
+import csv
+
+with open("sample_files/02_customers-100.csv", "r") as file:
+    reader = csv.reader(file)
+    for row in reader:
+        print(row)
+
+
+########### Example 4 - writing to a CSV file
+
+with open("sample_files/02_example_write.csv", "w", newline="") as file:
+    writer = csv.writer(file)
+    writer.writerow(["Name", "Age", "City"])
+    writer.writerow(["Jazmine", 30, "New York"])
+
+
+########### Problem 5
+
+# Print the result of the 'special addition' of 2 and 3
+
+# Print the result of the 'special multiplication' of 2 and 3
+
+
+########### Problem 6
+
+# Display a prompt for the user to enter their age
+
+# Print the age of the user after 5 years
+
+name = input("Enter your name: ")
+print("Hello, " + name + "!")
+
+
+########### Example 5 - using the os module
+
+import os
+
+# Print the path of the current working directory (CWD)
+print(os.getcwd())
+
+# Change the CWD
+os.chdir("sample_files")
+print(os.getcwd())
+
+# List all the file names in the CWD
+print(os.listdir(os.getcwd()))
