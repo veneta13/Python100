@@ -5,7 +5,7 @@
 
 # Initialize the Library: Start with an empty list of books.
 
-# Add the books "Harry Potter", "1984" and "The Great Gatsby" to the collection.
+# Add the books "Harry Potter", "1984", "The Great Gatsby", "Animal Farm", "Dracula" to the collection.
 
 # Remove "Harry Potter" from the collection.
 
@@ -21,7 +21,9 @@
 
 # Remove and return the last (alphabetically) book.
 
-# Find the index of "The Great Gatsby".
+# Find the index of "1984".
+
+# Add "Wuthering Heights" to the back of the list.
 
 # Create a new library, excluding the first book of the current one.
 
@@ -68,7 +70,7 @@ list_of_strings = ["banana", "apple", "strawberry"]
 
 # Print Bob's grade
 
-# Add a new student Peter and their grade
+# Add a new student Sam and her grade 91
 
 # Remove 'Alice' from the class
 
@@ -157,9 +159,6 @@ with open("sample_files/02_example_write.csv", "w", newline="") as file:
 # Display a prompt for the user to enter their age
 
 # Print the age of the user after 5 years
-
-name = input("Enter your name: ")
-print("Hello, " + name + "!")
 
 
 ########### Example 5 - using the os module
